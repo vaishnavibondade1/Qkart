@@ -7,26 +7,25 @@ import Checkout from "./components/Checkout";
 import Thanks from "./components/Thanks"
 
 export const config = {
-  endpoint: `http://${ipConfig.workspaceIp}:8082/api/v1`,
+    endpoint: ipConfig.workspaceIp,
 };
 
- 
 function App() {
-  return (
-    <div className="App">
-        <BrowserRouter>
-            <Switch>
-                <Route exact path="/">
-                    <Products />
-                </Route>
-                <Route path="/Register">
-                    <Register />
-                </Route>
-                <Route path="/Login">
-                    <Login />
-                </Route>
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path="/">
+                        <Products />
+                    </Route>
+                    <Route path="/Register">
+                        <Register />
+                    </Route>
+                    <Route path="/Login">
+                        <Login />
+                    </Route>
 
-                <Route path="/checkout">
+                    <Route path="/checkout">
                         <Checkout />
                     </Route>
                     <Route path="/thanks">
@@ -34,10 +33,10 @@ function App() {
                     </Route>
 
 
-            </Switch>
-        </BrowserRouter>
-    </div>
-);
+                </Switch>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
